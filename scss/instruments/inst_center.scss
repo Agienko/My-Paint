@@ -1,0 +1,25 @@
+.inst_center{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1rf 1rf;
+    column-gap: 10px;
+    border-left: 1px solid rgb(211, 211, 211);
+    border-right: 1px solid rgb(211, 211, 211);
+    height: 100%;
+    margin: 0 20px;
+    padding: 0 10px;
+    img{
+        position: relative;
+        width: 25px;
+        height: 25px;
+        border: 2px solid rgb(153, 153, 153);
+        border-radius: 2px;
+        &:hover{
+            cursor: pointer;
+            background-color:rgb(243, 247, 186);
+            border: 2px solid rgb(0, 0, 0);
+         }
+    }
+    
+}

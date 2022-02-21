@@ -1,0 +1,20 @@
+.mainMenu{
+    display: flex;
+    background-color:#e4af00;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    li{
+        white-space: nowrap;
+        user-select: none;
+        list-style-type: none;
+        padding: 3px 8px;
+        border-radius: 2px;
+        &:hover{
+            cursor: pointer;
+            background-color: #e47e1f;
+            transition: all 0.3s;
+        }
+        }
+    
+}
+

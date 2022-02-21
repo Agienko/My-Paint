@@ -10,26 +10,56 @@
 </head>
 <body>
     <nav>
-        <ul class="menu">
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
+        <ul class="mainMenu">
+            <li>Сохранить</li>
+            <li>Размер</li>
+            <li>Линейки</li>
+            <li>Строка состояния</li>
+            <li>Очистить</li>
         </ul>
     </nav>
-<menu>
-    меню
-</menu>
-
-    <aside class="sideBar">
-сайдбар
-    </aside>
-<canvas class="canvas" height="500px" width="800px">   
-</canvas>
-
-<input type="color">
-<footer>
-
-</footer>
-    <script src="index.js"></script>
+    <menu class="instruments">
+        <div class="inst_left">
+            <label for="sickline">Толщина:</label>
+            <input id="sickLine" type="range">
+            <button>Очистить</button>
+        </div>
+        <div class="inst_center">
+            <img src="./img/pencil.png" alt="Карандаш">
+            <img src="./img/brush.png" alt="Кисть">
+            <img src="./img/text.png" alt="Текст">
+            <img src="./img/line.png" alt="Линия">
+            <img src="./img/rectangle.png" alt="Прямоугольник">
+            <img src="./img/ellipse.png" alt="Круг">
+            <img src="./img/pour.jpg" alt="Заливка">
+            <img src="./img/ersaer.jpg" alt="Ластик">
+        </div>
+        <div class="inst_palitra_main">
+            <div id="palitra_main1"></div>
+            <div id="palitra_main2"></div>
+        </div>
+        <div class="inst_palitra">
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div> 
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+        </div>
+    </menu>
+    <div class="wrapper">
+        <canvas class="canvas" height="500px" width="800px">
+            This program does not work in your browser. Please update!   
+        </canvas>
+    </div>
+    <footer class="footer">
+        <span class="footer_info">x:... y:... </span>
+        <span class="footer_size">Размер...</span>
+        <span class="scale_wrapp"> 
+            <span >100%</span>
+            <span class="sign">-</span>
+            <input type="range" id="scale">
+            <span class="sign">+</span> 
+        </span> 
+    </footer>
+    <script src="palitra_proms.js"></script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+.instruments{
+    display: flex;
+    height: 78px;
+    border: 1px solid rgb(240, 240, 240);
+    padding: 5px 0;
+    background-color:rgb(252, 248, 244);
+    select{
+        margin-left: 5px;
+        height: min-content;
+        width: 50px;
+    }
+}
+
+@import './inst_center.scss';
+@import './inst_left.scss';
+@import './inst_palitra.scss'

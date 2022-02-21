@@ -1,0 +1,13 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.canvas{
+    display: flex;
+    height: 500px;
+    width: 800px;
+    border: 1px solid rgba(128, 128, 128, 0.37);
+    border-radius:5px;
+    box-shadow: 2px 2px 5px rgba(87, 87, 87, 0.404);
+}

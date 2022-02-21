@@ -1,4 +1,18 @@
+$sky-color: #375E97;
+$red-color: #FB6542;
+$sun-color: #FFBB00;
+$gras-color: #3F681C;
+
+
 *{
     margin: 0;
     padding: 0;
+    
 }
+
+
+@import './mainMenu.scss';
+@import './instruments/instruments.scss';
+@import './footer.scss';
+@import './canvas.scss';
+

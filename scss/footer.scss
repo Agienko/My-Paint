@@ -1,0 +1,23 @@
+.footer{
+    font-family: monospace;
+    font-size: 16px;
+    display: flex;
+    letter-spacing: 2px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color:rgb(241, 217, 79);
+    align-items:center;
+    justify-content: space-between;
+    .sign{
+        margin: 8px;
+        padding: 5px;
+        font-size: 30px;
+    }
+    .footer_info{
+        margin: 10px;
+    }
+    .scale_wrapp{
+        white-space: nowrap;
+    }
+}
