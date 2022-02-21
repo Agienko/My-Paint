@@ -15,20 +15,5 @@
     }
     input{
         margin-left: 8px;
-        position: relative;
-   
-    &:hover:after { 
-        content: attr(value); 
-        position: absolute;
-        z-index: 1;
-        background: rgb(255, 255, 230);
-        white-space: nowrap;
-        font-family: Arial, sans-serif;
-        font-size: 11px;
-        padding: 5px 10px;
-        border: 1px solid rgba(143, 143, 143, 0.39);
-        border-radius:3px;
-        box-shadow: 1px 1px 2px black;
-       }
     }
 }
