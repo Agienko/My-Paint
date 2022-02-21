@@ -7,7 +7,12 @@ $gras-color: #3F681C;
 *{
     margin: 0;
     padding: 0;
-    
+}
+
+
+button{
+    border: 1px solid black;
+    border-radius:4px;
 }
 
 
@@ -15,4 +20,5 @@ $gras-color: #3F681C;
 @import './instruments/instruments.scss';
 @import './footer.scss';
 @import './canvas.scss';
-
+@import './form.scss';
+@import './sideBar.scss';

@@ -5,11 +5,11 @@
     column-gap: 10px;
     height: 100%;
     padding: 0 10px;
-    div{
+    input{
         width: 30px;
         height: 30px;
         border: 1px solid rgb(112, 112, 112);
-        border-radius: 50%;
+        border-radius: 5px;
         &:hover{
             border: 1px solid rgb(0, 0, 0);
          }

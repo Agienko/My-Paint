@@ -9,57 +9,87 @@
     <title>My Paint</title>
 </head>
 <body>
-    <nav>
-        <ul class="mainMenu">
-            <li>Сохранить</li>
-            <li>Размер</li>
-            <li>Линейки</li>
-            <li>Строка состояния</li>
-            <li>Очистить</li>
-        </ul>
-    </nav>
-    <menu class="instruments">
-        <div class="inst_left">
-            <label for="sickline">Толщина:</label>
-            <input id="sickLine" type="range">
-            <button>Очистить</button>
+    <div class="withoutForms">
+        <nav>
+            <ul class="mainMenu">
+                <li>Сохранить</li>
+                <li>Размер</li>
+                <li>Линейки</li>
+                <li>Строка состояния</li>
+                <li>Очистить</li>
+            </ul>
+        </nav>
+        <menu class="instruments">
+            <div class="inst_left">
+                <label for="sickline">Толщина:</label>
+                <input id="sickLine" type="range" value="2">
+                <output id="forSickLine">2</output>
+                <button id="btnClose">Очистить</button>
+            </div>
+            <div class="inst_center">
+                <img src="./img/pencil.png" alt="Карандаш">
+                <img src="./img/brush.png" alt="Кисть">
+                <img src="./img/text.png" alt="Текст">
+                <img src="./img/line.png" alt="Линия">
+                <img src="./img/rectangle.png" alt="Прямоугольник">
+                <img src="./img/ellipse.png" alt="Круг">
+                <img src="./img/pour.png" alt="Заливка">
+                <img src="./img/ersaer.png" alt="Ластик">
+            </div>
+            <div class="inst_palitra_main">
+                <input id="palitra_main1" type="color" value="#000000">
+                <input id="palitra_main2" type="color" value="#ffffff">
+            </div>
+            <div class="inst_palitra">
+                <div></div> <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div> <div></div>
+                <div></div> <div></div> <div></div> <div></div> <div></div> 
+                <div></div> <div></div> <div></div> <div></div> <div></div>
+            </div>
+        </menu>
+
+<aside class="sideBar">
+
+</aside>
+
+        <div class="wrapper">
+            <canvas class="canvas" height="500" width="800">
+                This program does not work in your browser. Please update!   
+            </canvas>
         </div>
-        <div class="inst_center">
-            <img src="./img/pencil.png" alt="Карандаш">
-            <img src="./img/brush.png" alt="Кисть">
-            <img src="./img/text.png" alt="Текст">
-            <img src="./img/line.png" alt="Линия">
-            <img src="./img/rectangle.png" alt="Прямоугольник">
-            <img src="./img/ellipse.png" alt="Круг">
-            <img src="./img/pour.png" alt="Заливка">
-            <img src="./img/ersaer.png" alt="Ластик">
-        </div>
-        <div class="inst_palitra_main">
-            <div id="palitra_main1"></div>
-            <div id="palitra_main2"></div>
-        </div>
-        <div class="inst_palitra">
-            <div></div> <div></div> <div></div> <div></div> <div></div>
-            <div></div> <div></div> <div></div> <div></div> <div></div>
-            <div></div> <div></div> <div></div> <div></div> <div></div> 
-            <div></div> <div></div> <div></div> <div></div> <div></div>
-        </div>
-    </menu>
-    <div class="wrapper">
-        <canvas class="canvas" height="500px" width="800px">
-            This program does not work in your browser. Please update!   
-        </canvas>
+        <footer class="footer">
+            <span class="footer_info">x:... y:... </span>
+            <span class="footer_size">Размер 800x500</span>
+            <span class="scale_wrapp"> 
+                <span >100%</span>
+                <span class="sign">-</span>
+                <input type="range" id="scale">
+                <span class="sign">+</span> 
+            </span> 
+        </footer>
     </div>
-    <footer class="footer">
-        <span class="footer_info">x:... y:... </span>
-        <span class="footer_size">Размер...</span>
-        <span class="scale_wrapp"> 
-            <span >100%</span>
-            <span class="sign">-</span>
-            <input type="range" id="scale">
-            <span class="sign">+</span> 
-        </span> 
-    </footer>
-    <script src="palitra_proms.js"></script>
+<form class="form_size">
+    <header><span>Размер изображения</span> <span class="form_close">X</span></header>
+        <div class="form_wrapper">
+            <p>Единицы измерения: пиксели</p>
+            <label for="form_width"> 
+                Ширина: 
+                <input type="number" id="form_width" placeholder="Ширина" value="800" >
+            </label>
+            <label for="form_height">
+                Высота:
+                <input type="number" id="form_height" placeholder="Высота" value="500" >
+            </label>
+            <button id="btn_form_default">По умолчанию</button>
+            <button id="btn_form_ok">ОК</button> <button id="btn_form_cancel">Отмена</button>
+        </div>
+</form>
+
+    <script src="./js/palitra_proms.js"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/mainMenu.js" type="module"></script>
+    <script src="./js/btnClear.js" type="module"></script>
+    <script src="./js/canvas.js" type="module"></script>
+    <script src="./js/colorInputs.js" type="module"></script>
 </body>
 </html>
