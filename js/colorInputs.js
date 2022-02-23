@@ -1,11 +1,13 @@
-export const mainColor1 = document.querySelector('#palitra_main1');
-export const mainColor2 = document.querySelector('#palitra_main2');
+import { mainColor1, mainColor2 } from "./index.js";
+const sideBarColor1 = document.querySelector('#palitra1');
+const sideBarColor2 = document.querySelector('#palitra2');
 const palitra = document.querySelector('.inst_palitra');
 
 palitra.addEventListener('click', function(){
 if(event.target !== event.currentTarget){
     let rgbColor = getComputedStyle(event.target)['background-color']
     mainColor1.value = rgbToHex(rgbColor)
+    sideBarColor1.style.background = rgbToHex(rgbColor)
     }
 })
 
@@ -21,5 +23,13 @@ palitra.addEventListener('contextmenu', function(){
     if(event.target !== event.currentTarget){
         let rgbColor = getComputedStyle(event.target)['background-color']
         mainColor2.value = rgbToHex(rgbColor)
+        sideBarColor2.style.background = rgbToHex(rgbColor)
         }
     })
+
+    mainColor1.addEventListener('input', function(){
+      sideBarColor1.style.background =  event.target.value
+    })
+    mainColor2.addEventListener('input', function(){
+        sideBarColor2.style.background =  event.target.value
+      })

@@ -14,27 +14,30 @@
             <ul class="mainMenu">
                 <li>Сохранить</li>
                 <li>Размер</li>
-                <li>Линейки</li>
                 <li>Строка состояния</li>
                 <li>Очистить</li>
             </ul>
         </nav>
         <menu class="instruments">
             <div class="inst_left">
-                <label for="sickline">Толщина:</label>
-                <input id="sickLine" type="range" value="2">
-                <output id="forSickLine">2</output>
+                <label for="sickline">Толщина:  </label>
+                <input id="sickLine" type="range" value="1">
+                <output id="forSickLine">1</output>
+                <label for="opacityRange">Прозрачность: </label>
+                <input id="opacityRange" type="range" value="100">
+                <output id="forOpacityRange">100</output>
                 <button id="btnClose">Очистить</button>
             </div>
             <div class="inst_center">
                 <img src="./img/pencil.png" alt="Карандаш">
+                <img src="./img/ersaer.png" alt="Ластик">
                 <img src="./img/brush.png" alt="Кисть">
-                <img src="./img/text.png" alt="Текст">
+                <img src="./img/colorTest.png" alt="Палитра">
                 <img src="./img/line.png" alt="Линия">
                 <img src="./img/rectangle.png" alt="Прямоугольник">
                 <img src="./img/ellipse.png" alt="Круг">
                 <img src="./img/pour.png" alt="Заливка">
-                <img src="./img/ersaer.png" alt="Ластик">
+               
             </div>
             <div class="inst_palitra_main">
                 <input id="palitra_main1" type="color" value="#000000">
@@ -46,12 +49,27 @@
                 <div></div> <div></div> <div></div> <div></div> <div></div> 
                 <div></div> <div></div> <div></div> <div></div> <div></div>
             </div>
+            <div class="inst_right">
+                <Label for="fillable"> 
+                    Внутренняя заливка:
+                    <input type="checkbox" id="fillable">
+                </Label>
+            </div>
         </menu>
 
 <aside class="sideBar">
+    <span>&equiv;</span>
+    <div class="in">
+        Карандаш
+        <img src="./img/pencil.png" alt="Карандаш">
+    </div>
+       
+    <div>
+        <div id="palitra1"></div>
+        <div id="palitra2"></div>
+    </div>
 
 </aside>
-
         <div class="wrapper">
             <canvas class="canvas" height="500" width="800">
                 This program does not work in your browser. Please update!   
@@ -61,9 +79,9 @@
             <span class="footer_info">x:... y:... </span>
             <span class="footer_size">Размер 800x500</span>
             <span class="scale_wrapp"> 
-                <span >100%</span>
+                <span id="scaleInfo">100%</span>
                 <span class="sign">-</span>
-                <input type="range" id="scale">
+                <input type="range" id="scale" min="20" max="200" value="100">
                 <span class="sign">+</span> 
             </span> 
         </footer>
@@ -84,12 +102,18 @@
             <button id="btn_form_ok">ОК</button> <button id="btn_form_cancel">Отмена</button>
         </div>
 </form>
+<div id="cursor">
+    <img src="./img/pencil.png" alt="Карандаш">
+</div>
 
-    <script src="./js/palitra_proms.js"></script>
     <script src="./js/index.js" type="module"></script>
+    <script src="./js/palitra_proms.js"></script>
     <script src="./js/mainMenu.js" type="module"></script>
     <script src="./js/btnClear.js" type="module"></script>
-    <script src="./js/canvas.js" type="module"></script>
     <script src="./js/colorInputs.js" type="module"></script>
+    <script src="./js/instr&sideBar.js" type="module"></script>
+    <script src="./js/footer.js" type="module"></script>
+    <script src="./js/cursor.js" type="module"></script>
+    <script src="./js/opacityRange.js" type="module"></script>
 </body>
 </html>

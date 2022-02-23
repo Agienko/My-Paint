@@ -1,17 +1,16 @@
-
+import { canvas , ctx} from "./index.js"
+import {mainColor2 } from "./index.js";
 const mainMenu = document.querySelector('.mainMenu')
 const withoutForms = document.querySelector('.withoutForms')
 const sizeInfo = document.querySelector('.footer_size')
-export const canvas = document.querySelector('.canvas')
-export let ctx = canvas.getContext('2d');
+
+
 const btnOk = document.querySelector('#btn_form_ok')
 const btnCancel = document.querySelector('#btn_form_cancel')
 const btnDefault = document.querySelector('#btn_form_default')
 const btnClose = document.querySelector('.form_close')
 const footer = document.querySelector('.footer')
 
-let w = document.forms[0].children[1].children[1].children[0].value
-let h = document.forms[0].children[1].children[2].children[0].value
 
 let isFooterHide = false;
 mainMenu.onclick = function(){
@@ -19,7 +18,7 @@ mainMenu.onclick = function(){
       document.forms[0].style.display = 'block';
       setTimeout(() => document.forms[0].style.opacity = '1', 0 )
       withoutForms.style.opacity = '0.3'
-      document.body.style.background = 'black'
+      document.body.style.background = 'gray'
       withoutForms.style.pointerEvents = 'none'
     } 
     if(event.target.textContent === 'Строка состояния') {
@@ -28,9 +27,16 @@ mainMenu.onclick = function(){
       isFooterHide = !isFooterHide;
     }
     if(event.target.textContent === 'Очистить') {
-      w = document.forms[0].children[1].children[1].children[0].value
-      h = document.forms[0].children[1].children[2].children[0].value
-      ctx.clearRect(0, 0, canvas.width, canvas.height )
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctx.fillStyle = mainColor2.value
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
+    }
+    if(event.target.textContent === 'Сохранить') {
+      var dataURL = canvas.toDataURL('image/jpeg', 1.0);
+      let link = document.createElement('a')
+      link.setAttribute('href', dataURL)
+      link.setAttribute('download', 'image.jpg')
+      onload=link.click()
     }
 }
 function closeForm(){
@@ -66,5 +72,10 @@ function changeCanvasSize(height, width){
   canvas.setAttribute('width',`${width}`)
   canvas.style.height = `${height}px`;
   canvas.style.width = `${width}px`;
-  ctx.clearRect(0, 0, width, height )
+  ctx.clearRect(0, 0, width, height)
+  ctx.fillStyle = mainColor2.value
+  ctx.fillRect(0, 0, width, height)
 }
+
+
+

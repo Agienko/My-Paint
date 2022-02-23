@@ -1,13 +1,71 @@
 .sideBar{
-    display: flex;
-    position:relative;
-    white-space:initial;
+    padding: 5px;
+    display: grid;
+    position: absolute;
+    grid-template-rows:  25px 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
     margin-top: 30px;
     border-radius: 0 10px 10px 0;
     height: 300px;
-    width: 100px;
+    width: 110px;
     float: left;
     border: 1px solid rgba(87, 87, 87, 0.308);
-    background-color:rgb(231, 231, 231);
+    background-color:rgb(241, 241, 241);
     box-shadow: 1px 1px 3px rgba(110, 110, 110, 0.507);
+    transition: all 1s ease-out;
+    div.in {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    div{
+        align-self:center;
+        justify-self: center;
+        #palitra1{
+            background-color:black;
+        }
+        #palitra2{
+            background-color:rgb(255, 255, 255);
+        }
+        
+        &:last-child{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        div{
+            margin: 5px;
+            width: 35px;
+            height: 35px;
+            border-radius:12px;
+            border: 1px solid rgba(109, 109, 109, 0.425);
+        }
+    }
+    span{
+        cursor: pointer;
+        user-select: none;
+        font-size: 1.3rem;
+        justify-self: end;
+        align-self: flex-start;
+        font-weight: bold;
+        color:rgb(109, 109, 109);
+        &:hover{
+            color:rgb(0, 0, 0);
+        }
+    }
+    img{
+        margin-top: 10px;
+        justify-self: center;
+        grid-row: 3/3;
+        width: 50px;
+        height: 50px;
+        border: 2px solid rgb(153, 153, 153);
+        border-radius: 4px;
+    }
 }
+
+
+
+
+
+    

@@ -8,6 +8,22 @@ button {
   border-radius: 4px;
 }
 
+img {
+  user-select: none;
+}
+
+#cursor {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#cursor img {
+  user-select: none;
+  height: 25px;
+  width: 25px;
+}
+
 .mainMenu {
   display: flex;
   background-color: #e4af00;
@@ -49,8 +65,8 @@ button {
   border-left: 1px solid lightgray;
   border-right: 1px solid lightgray;
   height: 100%;
-  margin: 0 20px;
-  padding: 0 10px;
+  margin: 0 15px;
+  padding: 0 5px;
 }
 .inst_center img {
   position: relative;
@@ -66,13 +82,22 @@ button {
 }
 
 .inst_left {
+  font-size: 12px;
+  justify-content: center;
   margin-left: 10px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 90px 1fr 35px;
+  grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
 }
+.inst_left label:first-child {
+  grid-row: 1/1;
+}
+.inst_left label:nth-child(2) {
+  grid-row: 2/2;
+}
 .inst_left button {
+  grid-row: 3/3;
   grid-column: 1/3;
   background-color: rgba(250, 235, 215, 0.164);
 }
@@ -81,6 +106,9 @@ button {
 }
 .inst_left input {
   margin-left: 8px;
+}
+.inst_left output {
+  justify-self: center;
 }
 
 .inst_palitra {
@@ -200,7 +228,20 @@ button {
   box-shadow: 1px 1px 2px black;
 }
 
+.inst_right {
+  display: none;
+  padding: 3px;
+  position: relative;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 12px;
+}
+.inst_right input {
+  position: relative;
+  top: 3px;
+}
+
 .footer {
+  user-select: none;
   font-family: monospace;
   font-size: 16px;
   display: flex;
@@ -219,6 +260,7 @@ button {
   font-size: 30px;
 }
 .footer .footer_info {
+  width: 150px;
   margin: 10px;
 }
 .footer .scale_wrapp {
@@ -226,18 +268,23 @@ button {
 }
 
 .wrapper {
+  padding-bottom: 50px;
+  overflow: auto;
+  min-width: 900px;
   margin-top: 10px;
   display: flex;
   justify-content: center;
+  margin-left: 120px;
 }
 
 .canvas {
-  display: flex;
+  margin-left: -120px;
   height: 500px;
   width: 800px;
   border: 1px solid rgba(128, 128, 128, 0.37);
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(87, 87, 87, 0.404);
+  box-shadow: 1px 1px 2px rgba(110, 110, 110, 0.404);
+  cursor: none;
 }
 
 .form_size {
@@ -321,17 +368,68 @@ button {
 }
 
 .sideBar {
-  display: flex;
-  position: relative;
-  white-space: initial;
+  padding: 5px;
+  display: grid;
+  position: absolute;
+  grid-template-rows: 25px 1fr 1fr;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  text-align: center;
   margin-top: 30px;
   border-radius: 0 10px 10px 0;
   height: 300px;
-  width: 100px;
+  width: 110px;
   float: left;
   border: 1px solid rgba(87, 87, 87, 0.308);
-  background-color: #e7e7e7;
+  background-color: #f1f1f1;
   box-shadow: 1px 1px 3px rgba(110, 110, 110, 0.507);
+  transition: all 1s ease-out;
+}
+.sideBar div.in {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.sideBar div {
+  align-self: center;
+  justify-self: center;
+}
+.sideBar div #palitra1 {
+  background-color: black;
+}
+.sideBar div #palitra2 {
+  background-color: white;
+}
+.sideBar div:last-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.sideBar div div {
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 12px;
+  border: 1px solid rgba(109, 109, 109, 0.425);
+}
+.sideBar span {
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.3rem;
+  justify-self: end;
+  align-self: flex-start;
+  font-weight: bold;
+  color: #6d6d6d;
+}
+.sideBar span:hover {
+  color: black;
+}
+.sideBar img {
+  margin-top: 10px;
+  justify-self: center;
+  grid-row: 3/3;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #999999;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */

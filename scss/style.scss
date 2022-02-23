@@ -1,21 +1,19 @@
-$sky-color: #375E97;
-$red-color: #FB6542;
-$sun-color: #FFBB00;
-$gras-color: #3F681C;
-
 
 *{
     margin: 0;
     padding: 0;
-}
 
+}
 
 button{
     border: 1px solid black;
     border-radius:4px;
 }
 
-
+img{
+    user-select: none;
+}
+@import './cursor.scss';
 @import './mainMenu.scss';
 @import './instruments/instruments.scss';
 @import './footer.scss';

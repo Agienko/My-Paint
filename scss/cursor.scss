@@ -1,0 +1,12 @@
+#cursor{
+    // background-color:rgb(240, 156, 46);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    img{
+        user-select: none;
+        height: 25px;
+        width: 25px;
+    }
+}
