@@ -4,6 +4,7 @@ import { drawArc } from "./canvasInstruments/arc.js";
 import { drawLine } from "./canvasInstruments/line.js";
 import { drawRect } from "./canvasInstruments/rect.js";
 import { pipette } from "./canvasInstruments/pipette.js";
+import { drawText } from "./canvasInstruments/text.js";
 import { fill } from "./canvasInstruments/fill.js";
 
 export const mainColor1 = document.querySelector('#palitra_main1');
@@ -29,3 +30,4 @@ drawLine()
 drawPen()
 pipette()
 drawRect()
+drawText()

@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background-color: whitesmoke;
+}
+
 button {
   border: 1px solid black;
   border-radius: 4px;
@@ -450,6 +454,14 @@ img {
   background-color: #dfd391;
   border: 4px solid #ff8b8b;
   transition: all 0.2s;
+}
+
+#textarea {
+  display: none;
+  margin: 5px;
+  border-radius: 5px;
+  max-height: 72px;
+  border: 1px solid rgba(158, 158, 158, 0.459);
 }
 
 /*# sourceMappingURL=style.css.map */
