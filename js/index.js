@@ -6,22 +6,14 @@ import { drawRect } from "./canvasInstruments/rect.js";
 import { pipette } from "./canvasInstruments/pipette.js";
 import { fill } from "./canvasInstruments/fill.js";
 
-
 export const mainColor1 = document.querySelector('#palitra_main1');
 export const mainColor2 = document.querySelector('#palitra_main2');
 export const canvas = document.querySelector('.canvas')
 export let ctx = canvas.getContext('2d');
 
-
-
-
-
-
-
 ctx.clearRect(0, 0, canvas.width, canvas.height)
 ctx.fillStyle = mainColor2.value
 ctx.fillRect(0, 0, canvas.width, canvas.height)
-
 
 export let sick = '1';
 sickLine.addEventListener('mousemove', function(){
@@ -29,10 +21,8 @@ sickLine.addEventListener('mousemove', function(){
   forSickLine.textContent = sick
 })
 
-    
 
 drawArc()
-
 drawErsaer()
 fill()
 drawLine()

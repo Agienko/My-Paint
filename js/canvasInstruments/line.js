@@ -1,6 +1,7 @@
 import { canvas , ctx, mainColor1, sick} from "../index.js"
 import { instrType } from "../instr&sideBar.js";
 import { opacityValue } from "../opacityRange.js";
+import { restoreArr} from "../restore.js";
 export function drawLine(){
     canvas.addEventListener('mousedown', run)
        function run(){
@@ -13,6 +14,7 @@ export function drawLine(){
             let y = event.offsetY
             let endX, endY;
             let save = ctx.getImageData(0, 0, canvas.width, canvas.height)
+            restoreArr.push(save)
             ctx.moveTo(x,y)
              
              function change(){

@@ -1,6 +1,7 @@
 import { canvas , ctx, mainColor1, sick} from "../index.js"
 import { instrType } from "../instr&sideBar.js";
 import { opacityValue } from "../opacityRange.js";
+import { restoreArr} from "../restore.js";
 export function drawPen() {
     canvas.addEventListener('mousedown', run)
      function run(){
@@ -13,6 +14,9 @@ export function drawPen() {
         
         ctx.lineJoin = 'round' 
         ctx.lineCap = 'round'
+        let save = ctx.getImageData(0, 0, canvas.width, canvas.height)
+        restoreArr.push(save)
+
         ctx.beginPath()
         ctx.moveTo(x, y)
 

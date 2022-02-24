@@ -1,6 +1,7 @@
 import { canvas , ctx, mainColor1, mainColor2, sick} from "../index.js"
 import { instrType } from "../instr&sideBar.js";
 import { opacityValue } from "../opacityRange.js";
+import { restoreArr} from "../restore.js";
 export function drawArc(){
         canvas.addEventListener('mousedown', run)
         function run(){
@@ -13,6 +14,7 @@ export function drawArc(){
         
         let radius = 0;
         let save = ctx.getImageData(0, 0, canvas.width, canvas.height)
+        restoreArr.push(save)
         function change(){
         radius = ((event.offsetX - x)**2 + (event.offsetY - y)**2)**0.5
         ctx.clearRect(0, 0, canvas.width, canvas.height )
@@ -33,6 +35,7 @@ export function drawArc(){
                 ctx.fillStyle = mainColor2.value
                 ctx.fill()
              } 
+             
             })
             }
     canvas.addEventListener('mousemove', change)

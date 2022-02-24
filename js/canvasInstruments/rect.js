@@ -1,6 +1,7 @@
 import { canvas , ctx, mainColor1, mainColor2, sick} from "../index.js"
 import { instrType } from "../instr&sideBar.js";
 import { opacityValue } from "../opacityRange.js";
+import { restoreArr} from "../restore.js";
 export function drawRect(){
         canvas.addEventListener('mousedown', run)
         function run(){
@@ -12,6 +13,7 @@ export function drawRect(){
                 let y = event.offsetY
                 
                 let save = ctx.getImageData(0, 0, canvas.width, canvas.height)
+                restoreArr.push(save)
     
                 function change(){
                
