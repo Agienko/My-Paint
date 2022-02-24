@@ -1,7 +1,8 @@
-import { mainColor1, mainColor2 } from "./index.js";
-const sideBarColor1 = document.querySelector('#palitra1');
-const sideBarColor2 = document.querySelector('#palitra2');
-const palitra = document.querySelector('.inst_palitra');
+import { mainColor1, mainColor2 } from "./index.js"
+
+const sideBarColor1 = document.querySelector('#palitra1')
+const sideBarColor2 = document.querySelector('#palitra2')
+const palitra = document.querySelector('.inst_palitra')
 
 palitra.addEventListener('click', function(){
 if(event.target !== event.currentTarget){

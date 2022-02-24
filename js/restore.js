@@ -1,4 +1,4 @@
-import { ctx } from "./index.js";
+import { ctx } from "./index.js"
 
 export let restoreArr = []
 

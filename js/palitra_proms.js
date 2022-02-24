@@ -1,5 +1,4 @@
 //подсказки цвета палитры
-
 const colorNames = [
 'Черный', 'Серый', 'Темно-красный', 'Красный', 'Оранжевый',
 'Желтый', 'Зеленый', 'Бирюзовый', 'Индиго', 'Сиреневый', 
@@ -8,15 +7,14 @@ const colorNames = [
 ]
 
 const palitra = document.querySelector('.inst_palitra')
-
 Array.from(palitra.children).forEach((element, index) => {
     element.setAttribute('data-title', colorNames[index])
 });
 
-palitra.addEventListener('mouseover', function(){
+palitra.addEventListener('mouseover', () =>{
    if(event.target.getAttribute('data-title') !== null){
        let x = event.target;
-       setTimeout(() => x.className = 'prom',1000 )
+       setTimeout(() => x.className = 'prom', 1000)
    }
 })
 
