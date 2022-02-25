@@ -21,6 +21,6 @@ export function drawText() {
             ctx.fillText(textarea.value, x, y)
             ctx.fill()
          } 
-}
-}         
+        }
+    }         
 }

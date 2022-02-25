@@ -16,7 +16,6 @@ export function drawRect(){
                 restoreArr.push(save)
     
                 function change(){
-               
                 ctx.clearRect(0, 0, canvas.width, canvas.height )
                 ctx.putImageData(save, 0, 0)
                 ctx.beginPath()
@@ -35,9 +34,8 @@ export function drawRect(){
                         ctx.fill()
                      } 
                     document.removeEventListener('mouseup', up)
-                    
                     })
-                    }
+                }
             canvas.addEventListener('mousemove', change)
             }
        } 

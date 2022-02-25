@@ -11,16 +11,13 @@ export function drawPen() {
         ctx.globalAlpha = opacityValue
         let x = event.offsetX 
         let y = event.offsetY
-        
         ctx.lineJoin = 'round' 
         ctx.lineCap = 'round'
         let save = ctx.getImageData(0, 0, canvas.width, canvas.height)
         restoreArr.push(save)
-
         ctx.beginPath()
         ctx.moveTo(x, y)
-
-    let  change = () =>{
+        let  change = () =>{
         ctx.stroke()
         ctx.lineTo(event.offsetX, event.offsetY)  
         }

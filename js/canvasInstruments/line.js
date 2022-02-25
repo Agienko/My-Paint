@@ -1,7 +1,7 @@
 import { canvas , ctx, mainColor1, sick} from "../index.js"
 import { instrType } from "../instr&sideBar.js";
 import { opacityValue } from "../opacityRange.js";
-import { restoreArr} from "../restore.js";
+import { restoreArr } from "../restore.js";
 export function drawLine(){
     canvas.addEventListener('mousedown', run)
        function run(){
@@ -28,7 +28,7 @@ export function drawLine(){
                ctx.stroke()
                document.addEventListener('mouseup', function up(){  
                  canvas.removeEventListener('mousemove', change )
-                document.removeEventListener('mouseup', up )
+                 document.removeEventListener('mouseup', up )
                  ctx.putImageData(save, 0, 0)
                  ctx.beginPath()
                  ctx.moveTo(x,y)

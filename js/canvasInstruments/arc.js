@@ -11,7 +11,6 @@ export function drawArc(){
         ctx.globalAlpha = opacityValue
         let x = event.offsetX
         let y = event.offsetY
-        
         let radius = 0;
         let save = ctx.getImageData(0, 0, canvas.width, canvas.height)
         restoreArr.push(save)
